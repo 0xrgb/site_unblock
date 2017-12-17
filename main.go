@@ -13,8 +13,10 @@ import (
 // PORT_DEFAULT는 기본으로 사용하는 포트 번호입니다.
 const PORT_DEFAULT = 8080
 
-const DUMMY_PACKET = "GET HTTP/1.1\r\n" +
-	"Host: tsumugi.shiraishi.millionlive.theaterdays\r\n" +
+const DUMMY_PACKET = "GET / HTTP/1.1\r\n" +
+	"Host: tsumugi.shiraishi\r\n" +
+	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n" +
+	"Connection: keep-alive\r\n" +
 	"\r\n"
 
 // usage는 이 프록시의 사용법을 stdout에 출력하고 프로그램을 종료합니다.
@@ -175,7 +177,7 @@ func over_the_horizon(conn net.Conn) {
 		// 하므로, ":http"을 뒤에 붙여주어야 합니다. 대부분의 HTTP 통신은 다른
 		// 포트를 이용하지 않으므로, 일단 무조건 붙여주도록 합니다.
 		// TODO: host뒤에 포트번호가 적혀있는지 체크하기
-		dial, err := net.Dial("tcp", string(host) + ":http")
+		dial, err := net.Dial("tcp", string(host)+":http")
 		if err != nil {
 			fmt.Println("[i] Cannot open socket:", err)
 			continue
