@@ -17,9 +17,12 @@ site_unblock <PORT>
 ### 성공
 
 + `gilgil.net`
++ `www.gilgil.net`
 + `test.gilgil.net`
 
 ### 실패
+
++ `gall.dcinside.com`
 
 대부분은 실패입니다.
 

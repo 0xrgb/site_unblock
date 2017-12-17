@@ -1,2 +1,2 @@
 [ ] Fix method for some sites that not work
-[ ] Fix println, panic -> log
+[ ] Change println, panic -> log

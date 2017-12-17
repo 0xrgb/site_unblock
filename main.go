@@ -15,14 +15,13 @@ const PORT_DEFAULT = 8080
 
 const DUMMY_PACKET = "GET / HTTP/1.1\r\n" +
 	"Host: tsumugi.shiraishi\r\n" +
-	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n" +
 	"Connection: keep-alive\r\n" +
 	"\r\n"
 
 // usage는 이 프록시의 사용법을 stdout에 출력하고 프로그램을 종료합니다.
 func usage() {
 	fmt.Println("Usage: site_unblock <PORT>")
-	fmt.Println("[+] Default PORT is ", PORT_DEFAULT)
+	fmt.Println("[+] Default PORT is", PORT_DEFAULT)
 	os.Exit(-1)
 }
 
