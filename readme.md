@@ -12,6 +12,17 @@ go get -u github.com/0xrgb/site_unblock
 site_unblock <PORT>
 ```
 
+## 결과
+
+### 성공
+
++ `gilgil.net`
++ `test.gilgil.net`
+
+### 실패
+
+대부분은 실패입니다.
+
 ## 설명
 
 앙영! 나능 너무 방가어!
